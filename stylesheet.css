@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.input-field {
+  background-color: #455a63;
+  height: 40vh;
+}
+
+.link-field {
+  background-color: #cfd8dc;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+}
+
+form {
+  
+}
+
+h2 {
+  height: 60vh;
+  margin: 0;
+}
+
