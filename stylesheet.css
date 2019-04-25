@@ -7,34 +7,79 @@ html {
 
 body {
   margin: 0;
+  font-family: "Open sans";
 }
 
 .input-field {
   background-color: #455a63;
-  height: 40vh;
 }
 
 .link-field {
   background-color: #cfd8dc;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
 }
 
 h1 {
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
+  text-align: center;
 }
 
 img {
-  height: 40px;
+  height: 50px;
+  padding-top: 30px;
   width: 40px;
 }
 
-form {
-  
+h2 {
+  margin: 0;
 }
 
+input {
+  border: 1px solid #dcddde;
+  font-size: 20px;
+  height: 40px;
+  margin: 4% 0 0 5%;
+  padding: 10px;
+  width: 90%;
+}
+
+::placeholder {
+  color: #bbbdbf;
+}
+
+.enter-btn {
+  background-color: #fec109;
+  border: none;
+  color: white;
+  font-family: "Open sans";
+  font-weight: 600;
+  font-size: 20px;
+  height: 40px;
+  margin: 4% 0 5% 5%;
+  width: 90%;
+}
+
+article {
+  background-color: white;
+  border: 1px solid #455a63;
+  height: 200px;
+  margin-top: 5%;
+  width: 90%;
+} 
+
 h2 {
-  height: 60vh;
-  margin: 0;
+  color: #455a63;
+  width: 90%;
+  margin: 10px auto;
+  border-bottom: 2px solid #d3dbdf;
+}
+
+h3 {
+  color: #6a8592;
+  text-decoration: underline #f5f7f7;
 }
 
