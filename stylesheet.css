@@ -7,34 +7,163 @@ html {
 
 body {
   margin: 0;
+  font-family: "Open sans";
 }
 
 .input-field {
   background-color: #455a63;
-  height: 40vh;
 }
 
 .link-field {
   background-color: #cfd8dc;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  flex-wrap: wrap;
 }
 
 h1 {
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
+  text-align: center;
 }
 
 img {
-  height: 40px;
+  height: 50px;
+  padding-top: 30px;
   width: 40px;
 }
 
-form {
-  
+input {
+  border: 2px solid #dcddde;
+  font-size: 20px;
+  height: 50px;
+  margin: 4% 0 0 5%;
+  padding: 10px;
+  width: 90%;
 }
+
+::placeholder {
+  color: #bbbdbf;
+}
+
+.enter-button {
+  background-color: #fec109;
+  border: none;
+  color: white;
+  font-family: "Open sans";
+  font-weight: 600;
+  font-size: 20px;
+  height: 45px;
+  margin: 4% 0 5% 5%;
+  width: 90%;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+article {
+  background-color: white;
+  border: 1px solid #455a63;
+  height: 180px;
+  margin-top: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+} 
 
 h2 {
-  height: 60vh;
-  margin: 0;
+  color: #455a63;
+  width: 94%;
+  margin: 10px auto;
+  border-bottom: 2px solid #d3dbdf;
+  font-size: 30px;
+  font-weight: 600;
 }
 
+h3 {
+  color: #6a8592;
+  text-decoration: underline #f5f7f7;
+  margin-left: 60px;
+}
+
+h6 {
+  border-bottom: 2px solid #d3dbdf;
+  width: 94%;
+  margin: 10px auto;
+}
+
+footer {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.read-btn,
+.delete-btn {
+  border: none;
+  font-size: 18px;
+  color: #455a63;
+  border-bottom: 2px solid #f5f7f7;
+}
+
+.read-btn {
+  margin-left: 10px;
+}
+
+.delete-btn {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  
+  body {
+    display: grid;
+    grid-template-areas:
+    ".input-field .link-field";
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+  }
+
+  .link-field {
+    height: 100vh;
+  }
+
+  .input-field {
+    display: grid;
+  }
+
+  h1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: 700;
+  }
+
+  img {
+   padding: 0;
+   height: 120px;
+   width: 140px;
+  }
+
+  input {
+    margin-bottom: 25px;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+
+  h1 {
+    font-size: 90px;
+  }
+
+  img {
+    height: 100px;
+    width: 120px;
+   }
+}
