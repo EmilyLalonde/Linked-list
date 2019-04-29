@@ -12,19 +12,22 @@
 <![endif]-->
 </head>
 <body>
-<section class= "input-field">
-  <h1>Linked <img src="images/linked-list-logo.svg" alt= "two links hooked together"> List</h1>
-<form>
-  <input type= "text" name= "Website Title" placeholder= "Website Title" class= "title-input" aria-required="true">
-  <p class= "title-input-error"></p>
-  <input type= "text" name= "Website URL" placeholder= "Website URL" class= "url-input" >
-  <p class= "url-input-error"></p>
-  <button class= "enter-button">Enter</button>
-</form>
-</section>
-<section class= "link-field">
-</section>
+  <section class="input-field">
+    <h1>Linked <img src="images/linked-list-logo.svg" alt="two links hooked together"> List</h1>
+    <form>
+      <input type="text" name="Website Title" placeholder="Website Title" class="title-input" aria-required="true">
+      <p class="title-input-error"></p>
+      <input type="text" name="Website URL" placeholder="Website URL" class="url-input">
+      <p class="url-input-error"></p>
+      <button class="enter-button">Enter</button>
+    </form>
+  </section>
+  <section class="link-field" id="link-cards">
+  </section>
+  <p>Number of Cards</p>
+  <p id="card-count"></p>
   <script src="read.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
