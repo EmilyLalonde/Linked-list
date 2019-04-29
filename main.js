@@ -5,8 +5,8 @@ var card= document.querySelector('.card');
 var titleError= document.querySelector('.title-input-error');
 var urlError= document.querySelector('.url-input-error');
 var linkField = document.querySelector('.link-field')
-
-
+var counter = 0;
+var readCounter = 0;
 
 window.addEventListener('keyup', enterButtonAbility);
 enterButton.addEventListener('click', enterButtonAbility);
@@ -14,8 +14,8 @@ titleInput.addEventListener('keyup', enterButtonAbility);
 urlInput.addEventListener('keyup', enterButtonAbility);
 enterButton.addEventListener('click', errorMessage);
 enterButton.addEventListener('click', createCard);
-enterButton.addEventListener('click', cardCounter);
-linkField.addEventListener('click', read);
+enterButton.addEventListener('click', increment);
+
 linkField.addEventListener('click', function (e) {
   if (e.target.className === 'delete-btn') {
     e.target.parentElement.parentElement.remove();
@@ -39,9 +39,14 @@ function createCard (e) {
   </footer>
 </article>`
 linkField.insertAdjacentHTML('afterbegin', newCard);
+var deleteButton = document.querySelector('.delete-btn');
+deleteButton.addEventListener('click', decrement);
+var readButton = document.querySelector('.read-btn');
+readButton.addEventListener('click', read);
+readButton.addEventListener('click', addReadCount);
+readButton.addEventListener('click', subtractReadCount);
 clearInputs();
 }
-
 
  function clearInputs() {
   titleInput.value = "";
@@ -68,19 +73,34 @@ function enterButtonAbility(e){
    }
  };
 
- function cardCounter() {
-  var countCards = document.getElementById('link-cards').childElementCount;
-  document.getElementById('card-count').innerHTML = countCards;
+function read(event) {
+  var markRead = event.target;
+  if (markRead.classList.contains('read')) {
+    markRead.classList.remove('read');
+    subtractReadCount();
+  } else {
+    markRead.classList.add('read');
+    addReadCount();
+  }
 }
 
+function increment() {
+  counter++;
+  document.getElementById('card-count').innerHTML = counter;
+}
 
-function read(e) {
-  var markRead = document.querySelector('.read-btn')
-  if (e.target.classList.contains('read') && e.target.classList.contains('read-btn')) {
-    markRead.classList.remove('read');
-  } else if (e.target.classList.contains('read-btn')) {
-    markRead.classList.add('read');
-    console.log('working', markRead);
-  }
+function decrement() {
+  counter--;
+  document.getElementById('card-count').innerHTML = counter;
+}
+
+function addReadCount () {
+  readCounter++;
+  document.getElementById('read-count').innerHTML = readCounter;
+}
+
+function subtractReadCount () {
+  readCounter--;
+  document.getElementById('read-count').innerHTML = readCounter;
 }
 
